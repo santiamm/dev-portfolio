@@ -242,10 +242,44 @@ section:nth-child(even) {
 
 #hero {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   min-height: 100svh;
   padding-block: var(--space-32);
+}
+
+.hero-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-12);
+  width: 100%;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-photo-wrapper {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--color-bg-alt);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hide missing image so the alt background shows cleanly */
+.hero-photo-wrapper img.missing-photo {
+  visibility: hidden;
 }
 
 .hero-role {
@@ -267,6 +301,32 @@ section:nth-child(even) {
   flex-wrap: wrap;
   gap: var(--space-4);
   margin-top: var(--space-8);
+}
+
+.hero-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile layout overrides */
+@media (max-width: 768px) {
+  .hero-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-photo-wrapper {
+    order: -1; /* Photo on top */
+    max-width: 250px; /* Slightly smaller on mobile */
+  }
+
+  .hero-about {
+    margin-inline: auto; /* Center text block */
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
 }
 
 
