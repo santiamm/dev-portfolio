@@ -1,0 +1,370 @@
+/* =============================================================
+   MAIN STYLESHEET
+   Import order: variables → reset → base → typography →
+                 layout → components → utilities
+============================================================= */
+
+@import './variables.css';
+
+
+/* -----------------------------------------------------------
+   RESET / NORMALIZE
+----------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+/* -----------------------------------------------------------
+   TYPOGRAPHY HIERARCHY
+----------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-base);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  max-width: 65ch; /* optimal reading width */
+}
+
+
+/* -----------------------------------------------------------
+   LAYOUT
+----------------------------------------------------------- */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+/* Alternate section backgrounds */
+section:nth-child(even) {
+  background-color: var(--color-bg-alt);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+
+/* -----------------------------------------------------------
+   FLOATING ACTIONS
+   (language toggle + icon links pinned to viewport edge)
+----------------------------------------------------------- */
+
+.floating-actions {
+  position: fixed;
+  top: var(--space-6);
+  right: var(--space-6);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Language toggle button */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding-inline: var(--space-3);
+  background-color: var(--color-surface);
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--border-radius-full);
+  font-family: var(--font-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.lang-toggle:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+/* Floating icon links */
+.floating-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text-muted);
+  transition:
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.floating-icon:hover {
+  color: var(--color-accent);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+
+/* -----------------------------------------------------------
+   BUTTONS
+----------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--border-radius);
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  border: none;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-surface);
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
+}
+
+
+/* -----------------------------------------------------------
+   HERO SECTION
+----------------------------------------------------------- */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+  padding-block: var(--space-32);
+}
+
+.hero-role {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  margin-top: var(--space-4);
+}
+
+.hero-about {
+  max-width: 55ch;
+  color: var(--color-text-muted);
+  margin-top: var(--space-6);
+  font-size: var(--font-size-lg);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+
+/* -----------------------------------------------------------
+   SKILLS SECTION
+----------------------------------------------------------- */
+
+#skills {
+  /* layout defined in Phase 2 */
+}
+
+.skills-grid {
+  display: grid;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.skills-category h3 {
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+
+/* -----------------------------------------------------------
+   PROJECTS SECTION
+----------------------------------------------------------- */
+
+#projects {
+  /* layout defined in Phase 2 */
+}
+
+.projects-grid {
+  display: grid;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.project-card {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+
+/* -----------------------------------------------------------
+   CONTACT SECTION
+----------------------------------------------------------- */
+
+#contact {
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+
+/* -----------------------------------------------------------
+   FOOTER
+----------------------------------------------------------- */
+
+footer {
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+
+/* -----------------------------------------------------------
+   REDUCED MOTION
+   Respect user preference — disable transitions and animations
+----------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

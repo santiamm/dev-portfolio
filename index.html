@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal developer portfolio" />
+
+    <!-- Open Graph (filled in Phase 2) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Dev Portfolio</title>
+  </head>
+  <body>
+
+    <!-- =====================================================
+         FLOATING ACTIONS
+         - Language toggle button (active from Phase 1)
+         - GitHub icon link      (added in Phase 5)
+         - LinkedIn icon link    (added in Phase 5)
+         - Email icon link       (added in Phase 5)
+    ====================================================== -->
+    <div class="floating-actions" aria-label="Quick actions">
+      <button
+        id="lang-toggle"
+        class="lang-toggle"
+        aria-label="Switch language"
+        data-i18n-aria="aria_lang_toggle"
+      >
+        <!-- text injected by i18n.js -->
+      </button>
+
+      <a
+        href="#"
+        class="floating-icon"
+        id="link-github"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit my GitHub profile"
+        data-i18n-aria="aria_github"
+      >
+        <!-- GitHub icon — added in Phase 5 -->
+      </a>
+
+      <a
+        href="#"
+        class="floating-icon"
+        id="link-linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit my LinkedIn profile"
+        data-i18n-aria="aria_linkedin"
+      >
+        <!-- LinkedIn icon — added in Phase 5 -->
+      </a>
+
+      <a
+        href="#"
+        class="floating-icon"
+        id="link-email"
+        aria-label="Send me an email"
+        data-i18n-aria="aria_email"
+      >
+        <!-- Email icon — added in Phase 5 -->
+      </a>
+    </div>
+
+    <main>
+
+      <!-- =====================================================
+           HERO SECTION
+           - Name as h1 (data-i18n="hero_name")
+           - Role / title (data-i18n="hero_role")
+           - About paragraph (data-i18n="hero_about")
+           - Primary CTA button (data-i18n="hero_cta")
+           - CV download link (data-i18n="cv_download")
+      ====================================================== -->
+      <section id="hero" aria-labelledby="hero-name">
+        <h1 id="hero-name" data-i18n="hero_name"></h1>
+        <p class="hero-role" data-i18n="hero_role"></p>
+        <p class="hero-about" data-i18n="hero_about"></p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn--primary" data-i18n="hero_cta"></a>
+          <!-- CV download: disabled until the file is added in Phase 2 -->
+          <button class="btn btn--secondary" disabled aria-disabled="true" data-i18n="cv_download"></button>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SKILLS SECTION
+           - Section heading (data-i18n="skills_heading")
+           - Optional subheading (data-i18n="skills_subheading")
+           - 4 category groups:
+               · Languages & Core  (data-i18n="skills_cat_languages")
+               · Databases         (data-i18n="skills_cat_databases")
+               · Cloud & DevOps    (data-i18n="skills_cat_cloud")
+               · Other Tools       (data-i18n="skills_cat_other")
+           - Skill items (icons + labels) added in Phase 3
+      ====================================================== -->
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" data-i18n="skills_heading"></h2>
+        <p data-i18n="skills_subheading"></p>
+
+        <div class="skills-grid">
+          <div class="skills-category">
+            <h3 data-i18n="skills_cat_languages"></h3>
+            <!-- skill items added in Phase 3 -->
+          </div>
+          <div class="skills-category">
+            <h3 data-i18n="skills_cat_databases"></h3>
+            <!-- skill items added in Phase 3 -->
+          </div>
+          <div class="skills-category">
+            <h3 data-i18n="skills_cat_cloud"></h3>
+            <!-- skill items added in Phase 3 -->
+          </div>
+          <div class="skills-category">
+            <h3 data-i18n="skills_cat_other"></h3>
+            <!-- skill items added in Phase 3 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           PROJECTS SECTION
+           - Section heading (data-i18n="projects_heading")
+           - Optional subheading (data-i18n="projects_subheading")
+           - 3 project cards, each with:
+               · Title
+               · Description
+               · "View code" link (always shown)
+               · "Live demo" link (only if demo URL exists — rendered conditionally in Phase 4)
+           Projects: booking, stocksync, literacy
+           (Card content and repo links filled in Phase 4)
+      ====================================================== -->
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" data-i18n="projects_heading"></h2>
+        <p data-i18n="projects_subheading"></p>
+
+        <div class="projects-grid">
+
+          <!-- Project: Booking system -->
+          <article class="project-card" aria-labelledby="proj-booking-title">
+            <h3 id="proj-booking-title" data-i18n="project_booking_title"></h3>
+            <p data-i18n="project_booking_desc"></p>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects_view_code"></a>
+              <!-- demo link added in Phase 4 if applicable -->
+            </div>
+          </article>
+
+          <!-- Project: StockSync -->
+          <article class="project-card" aria-labelledby="proj-stocksync-title">
+            <h3 id="proj-stocksync-title" data-i18n="project_stocksync_title"></h3>
+            <p data-i18n="project_stocksync_desc"></p>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects_view_code"></a>
+              <!-- demo link added in Phase 4 if applicable -->
+            </div>
+          </article>
+
+          <!-- Project: Literacy app -->
+          <article class="project-card" aria-labelledby="proj-literacy-title">
+            <h3 id="proj-literacy-title" data-i18n="project_literacy_title"></h3>
+            <p data-i18n="project_literacy_desc"></p>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects_view_code"></a>
+              <!-- demo link added in Phase 4 if applicable -->
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- =====================================================
+           CONTACT SECTION
+           - Section heading (data-i18n="contact_heading")
+           - Invitation subheading (data-i18n="contact_subheading")
+           - Email link label (data-i18n="contact_email_label")
+           - Social links label (data-i18n="contact_social_label")
+           - Actual links / form added in Phase 2
+      ====================================================== -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" data-i18n="contact_heading"></h2>
+        <p data-i18n="contact_subheading"></p>
+        <div class="contact-links">
+          <a href="#" data-i18n="contact_email_label"></a>
+          <!-- social links added in Phase 2 -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         - "Built by [name]" text (data-i18n="footer_built_by")
+         - Year injected dynamically by JS (new Date().getFullYear())
+    ====================================================== -->
+    <footer>
+      <p>
+        <span data-i18n="footer_built_by"></span>
+        <span id="footer-year"></span>
+      </p>
+    </footer>
+
+    <!-- i18n system — must load after DOM -->
+    <script src="js/i18n.js"></script>
+
+  </body>
+</html>
