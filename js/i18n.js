@@ -20,15 +20,16 @@
 const translations = {
   en: {
     // Language toggle label (shows target language)
-    lang_toggle:      '',
-    aria_lang_toggle: '',   // "Switch to Spanish" / "Switch to English"
+    lang_toggle:      'ES',
+    aria_lang_toggle: 'Switch to Spanish',   // "Switch to Spanish" / "Switch to English"
 
     // Hero
-    hero_name:    '',
-    hero_role:    '',   // "Systems Engineering Student · Web Developer"
-    hero_about:   '',   // presentation paragraph (includes greeting)
-    hero_cta:     '',
-    cv_download:  '',
+    hero_name:      'Jhoseph Mendez',
+    hero_role:      'Systems Engineering Student · Web Developer',   // "Systems Engineering Student · Web Developer"
+    hero_about:     'Hi, I\'m Jhoseph — a systems engineering student who builds full web applications, mostly with PHP/Laravel, JavaScript, and Python. I like understanding a project end to end, from the database to the interface, and I\'m currently branching out into cloud and DevOps. Take a look at what I\'ve built below.',   // presentation paragraph (includes greeting)
+    hero_cta:       'See my work',
+    cv_download:    'Download CV',
+    hero_photo_alt: 'Portrait of Jhoseph',
 
     // Skills section
     skills_heading:       '',
@@ -68,18 +69,19 @@ const translations = {
     aria_email:    '',   // "Send me an email"
 
     // Footer ("Built by [name]" — year appended by JS)
-    footer_built_by: '',
+    footer_built_by: 'Built by Jhoseph Mendez ·',
   },
 
   es: {
-    lang_toggle:      '',
-    aria_lang_toggle: '',
+    lang_toggle:      'EN',
+    aria_lang_toggle: 'Cambiar a inglés',
 
-    hero_name:    '',
-    hero_role:    '',
-    hero_about:   '',
-    hero_cta:     '',
-    cv_download:  '',
+    hero_name:      'Jhoseph Mendez',
+    hero_role:      'Estudiante de Ingeniería de Sistemas · Desarrollador Web',
+    hero_about:     'Hola, soy Jhoseph — estudiante de ingeniería de sistemas que construye aplicaciones web completas, principalmente con PHP/Laravel, JavaScript y Python. Me gusta entender un proyecto de punta a punta, desde la base de datos hasta la interfaz, y actualmente estoy incursionando en cloud y DevOps. Échale un vistazo a lo que he construido más abajo.',
+    hero_cta:       'Ver mis proyectos',
+    cv_download:    'Descargar CV',
+    hero_photo_alt: 'Retrato de Jhoseph',
 
     skills_heading:       '',
     skills_subheading:    '',
@@ -111,7 +113,7 @@ const translations = {
     aria_linkedin: '',
     aria_email:    '',
 
-    footer_built_by: '',
+    footer_built_by: 'Creado por Jhoseph Mendez ·',
   },
 };
 
@@ -156,7 +158,16 @@ function setLanguage(lang) {
     }
   });
 
-  // 4. Persist choice across page loads
+  // 4. Update all [data-i18n-alt] alt attributes
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const key = el.dataset.i18nAlt;
+    const text = translations[lang][key];
+    if (text !== undefined) {
+      el.setAttribute('alt', text);
+    }
+  });
+
+  // 5. Persist choice across page loads
   localStorage.setItem('preferred-lang', lang);
 }
 
