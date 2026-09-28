@@ -32,12 +32,12 @@ const translations = {
     hero_photo_alt: 'Portrait of Jhoseph',
 
     // Skills section
-    skills_heading:       '',
-    skills_subheading:    '',
-    skills_cat_languages: '',   // "Languages & Core"
-    skills_cat_databases: '',   // "Databases"
-    skills_cat_cloud:     '',   // "Cloud & DevOps"
-    skills_cat_other:     '',   // "Other Tools"
+    skills_heading:       'Skills',
+    skills_subheading:    'Technologies I\'ve worked with',
+    skills_cat_languages: 'Languages & Core',   // "Languages & Core"
+    skills_cat_databases: 'Databases',   // "Databases"
+    skills_cat_cloud:     'Cloud & DevOps (learning)',   // "Cloud & DevOps"
+    skills_cat_other:     'Other Tools',   // "Other Tools"
 
     // Projects section
     projects_heading:    '',
@@ -83,12 +83,12 @@ const translations = {
     cv_download:    'Descargar CV',
     hero_photo_alt: 'Retrato de Jhoseph',
 
-    skills_heading:       '',
-    skills_subheading:    '',
-    skills_cat_languages: '',
-    skills_cat_databases: '',
-    skills_cat_cloud:     '',
-    skills_cat_other:     '',
+    skills_heading:       'Habilidades',
+    skills_subheading:    'Tecnologías con las que he trabajado',
+    skills_cat_languages: 'Lenguajes y base',
+    skills_cat_databases: 'Bases de datos',
+    skills_cat_cloud:     'Cloud y DevOps (aprendiendo)',
+    skills_cat_other:     'Otras herramientas',
 
     projects_heading:    '',
     projects_subheading: '',
