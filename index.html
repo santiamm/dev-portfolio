@@ -39,8 +39,8 @@
         class="lang-toggle"
         aria-label="Switch language"
         data-i18n-aria="aria_lang_toggle"
+        data-i18n="lang_toggle"
       >
-        <!-- text injected by i18n.js -->
       </button>
 
       <a
@@ -118,25 +118,54 @@
            - Skill items (icons + labels) added in Phase 3
       ====================================================== -->
       <section id="skills" aria-labelledby="skills-heading">
-        <h2 id="skills-heading" data-i18n="skills_heading"></h2>
-        <p data-i18n="skills_subheading"></p>
+        <div class="container">
+          <header class="section-header">
+            <h2 id="skills-heading" data-i18n="skills_heading"></h2>
+            <p data-i18n="skills_subheading" class="section-subheading"></p>
+          </header>
 
-        <div class="skills-grid">
-          <div class="skills-category">
-            <h3 data-i18n="skills_cat_languages"></h3>
-            <!-- skill items added in Phase 3 -->
-          </div>
-          <div class="skills-category">
-            <h3 data-i18n="skills_cat_databases"></h3>
-            <!-- skill items added in Phase 3 -->
-          </div>
-          <div class="skills-category">
-            <h3 data-i18n="skills_cat_cloud"></h3>
-            <!-- skill items added in Phase 3 -->
-          </div>
-          <div class="skills-category">
-            <h3 data-i18n="skills_cat_other"></h3>
-            <!-- skill items added in Phase 3 -->
+          <div class="skills-grid">
+            <div class="skills-category">
+              <h3 data-i18n="skills_cat_languages"></h3>
+              <div class="skills-chips">
+                <div class="skill-chip"><img src="assets/icons/javascript.svg" alt="" aria-hidden="true"><span>JavaScript</span></div>
+                <div class="skill-chip"><img src="assets/icons/python.svg" alt="" aria-hidden="true"><span>Python</span></div>
+                <div class="skill-chip"><img src="assets/icons/php.svg" alt="" aria-hidden="true"><span>PHP</span></div>
+                <div class="skill-chip"><img src="assets/icons/java.svg" alt="" aria-hidden="true"><span>Java</span></div>
+                <div class="skill-chip"><img src="assets/icons/html5.svg" alt="" aria-hidden="true"><span>HTML</span></div>
+                <div class="skill-chip"><img src="assets/icons/css3.svg" alt="" aria-hidden="true"><span>CSS</span></div>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3 data-i18n="skills_cat_databases"></h3>
+              <div class="skills-chips">
+                <div class="skill-chip"><img src="assets/icons/postgresql.svg" alt="" aria-hidden="true"><span>PostgreSQL</span></div>
+                <div class="skill-chip"><img src="assets/icons/mongodb.svg" alt="" aria-hidden="true"><span>MongoDB</span></div>
+                <div class="skill-chip"><img src="assets/icons/mariadb.svg" alt="" aria-hidden="true"><span>MariaDB</span></div>
+                <div class="skill-chip"><img src="assets/icons/sqlite.svg" alt="" aria-hidden="true"><span>SQLite</span></div>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3 data-i18n="skills_cat_cloud"></h3>
+              <div class="skills-chips">
+                <div class="skill-chip"><img src="assets/icons/aws.svg" alt="" aria-hidden="true"><span>AWS</span></div>
+                <div class="skill-chip"><img src="assets/icons/azure.svg" alt="" aria-hidden="true"><span>Azure</span></div>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3 data-i18n="skills_cat_other"></h3>
+              <div class="skills-chips">
+                <div class="skill-chip"><img src="assets/icons/laravel.svg" alt="" aria-hidden="true"><span>Laravel</span></div>
+                <div class="skill-chip"><img src="assets/icons/tailwindcss.svg" alt="" aria-hidden="true"><span>Tailwind CSS</span></div>
+                <div class="skill-chip"><img src="assets/icons/bootstrap.svg" alt="" aria-hidden="true"><span>Bootstrap</span></div>
+                <div class="skill-chip"><img src="assets/icons/github.svg" alt="" aria-hidden="true"><span>Git & GitHub</span></div>
+                <div class="skill-chip"><img src="assets/icons/restapi.svg" alt="" aria-hidden="true"><span>REST APIs</span></div>
+                <div class="skill-chip"><img src="assets/icons/xampp.svg" alt="" aria-hidden="true"><span>XAMPP</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

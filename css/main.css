@@ -334,19 +334,80 @@ section:nth-child(even) {
    SKILLS SECTION
 ----------------------------------------------------------- */
 
-#skills {
-  /* layout defined in Phase 2 */
+.section-header {
+  margin-bottom: var(--space-12);
+}
+
+.section-subheading {
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
 }
 
 .skills-grid {
   display: grid;
-  gap: var(--space-8);
-  margin-top: var(--space-8);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8) var(--space-12);
+}
+
+.skills-category {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .skills-category h3 {
   color: var(--color-accent);
-  margin-bottom: var(--space-4);
+  font-size: var(--font-size-lg);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
+}
+
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.skill-chip img {
+  width: 1.25rem;
+  height: 1.25rem;
+  filter: grayscale(100%) opacity(70%);
+  transition: filter var(--transition-fast);
+}
+
+.skill-chip:hover img {
+  filter: grayscale(0%) opacity(100%);
+}
+
+@media (hover: none) {
+  .skill-chip img {
+    filter: grayscale(0%) opacity(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
 }
 
 
@@ -406,10 +467,13 @@ section:nth-child(even) {
 ----------------------------------------------------------- */
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: var(--space-8) var(--space-6);
-  text-align: center;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
 }
 
 

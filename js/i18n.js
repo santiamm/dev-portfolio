@@ -179,7 +179,7 @@ function setLanguage(lang) {
 function injectFooterYear() {
   const yearEl = document.getElementById('footer-year');
   if (yearEl) {
-    yearEl.textContent = ` · ${new Date().getFullYear()}`;
+    yearEl.textContent = ` ${new Date().getFullYear()}`;
   }
 }
 
