@@ -29,9 +29,9 @@
     <!-- =====================================================
          FLOATING ACTIONS
          - Language toggle button (active from Phase 1)
-         - GitHub icon link      (added in Phase 5)
-         - LinkedIn icon link    (added in Phase 5)
-         - Email icon link       (added in Phase 5)
+         - GitHub icon link      (linked in Phase 4; icon added in Phase 5)
+         - LinkedIn icon link    (linked in Phase 4; icon added in Phase 5)
+         - Email icon link       (linked in Phase 4; icon added in Phase 5)
     ====================================================== -->
     <div class="floating-actions" aria-label="Quick actions">
       <button
@@ -44,7 +44,7 @@
       </button>
 
       <a
-        href="#"
+        href="https://github.com/santiamm"
         class="floating-icon"
         id="link-github"
         target="_blank"
@@ -56,7 +56,7 @@
       </a>
 
       <a
-        href="#"
+        href="https://www.linkedin.com/in/jhosephmendez"
         class="floating-icon"
         id="link-linkedin"
         target="_blank"
@@ -68,7 +68,7 @@
       </a>
 
       <a
-        href="#"
+        href="mailto:jsantiamm@gmail.com"
         class="floating-icon"
         id="link-email"
         aria-label="Send me an email"
@@ -172,69 +172,78 @@
 
       <!-- =====================================================
            PROJECTS SECTION
-           - Section heading (data-i18n="projects_heading")
-           - Optional subheading (data-i18n="projects_subheading")
-           - 3 project cards, each with:
-               · Title
-               · Description
-               · "View code" link (always shown)
-               · "Live demo" link (only if demo URL exists — rendered conditionally in Phase 4)
-           Projects: booking, stocksync, literacy
-           (Card content and repo links filled in Phase 4)
+           - 3 cards: booking, stocksync, literacy
+           - No demo links (none of the projects have a live demo)
+           - Repo links wired to real GitHub URLs
       ====================================================== -->
       <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading" data-i18n="projects_heading"></h2>
-        <p data-i18n="projects_subheading"></p>
+        <div class="container">
+          <header class="section-header">
+            <h2 id="projects-heading" data-i18n="projects_heading"></h2>
+            <p class="section-subheading" data-i18n="projects_subheading"></p>
+          </header>
 
-        <div class="projects-grid">
+          <div class="projects-grid">
 
-          <!-- Project: Booking system -->
-          <article class="project-card" aria-labelledby="proj-booking-title">
-            <h3 id="proj-booking-title" data-i18n="project_booking_title"></h3>
-            <p data-i18n="project_booking_desc"></p>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects_view_code"></a>
-              <!-- demo link added in Phase 4 if applicable -->
-            </div>
-          </article>
+            <!-- Project: Booking system -->
+            <article class="project-card" aria-labelledby="proj-booking-title">
+              <h3 id="proj-booking-title" data-i18n="project_booking_title"></h3>
+              <p data-i18n="project_booking_desc"></p>
+              <div class="project-links">
+                <a href="https://github.com/santiamm/booking-system-laravel"
+                   class="btn btn--secondary btn--sm"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-i18n="projects_view_code">
+                </a>
+              </div>
+            </article>
 
-          <!-- Project: StockSync -->
-          <article class="project-card" aria-labelledby="proj-stocksync-title">
-            <h3 id="proj-stocksync-title" data-i18n="project_stocksync_title"></h3>
-            <p data-i18n="project_stocksync_desc"></p>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects_view_code"></a>
-              <!-- demo link added in Phase 4 if applicable -->
-            </div>
-          </article>
+            <!-- Project: StockSync -->
+            <article class="project-card" aria-labelledby="proj-stocksync-title">
+              <h3 id="proj-stocksync-title" data-i18n="project_stocksync_title"></h3>
+              <p data-i18n="project_stocksync_desc"></p>
+              <div class="project-links">
+                <a href="https://github.com/santiamm/stocksync-enterprise"
+                   class="btn btn--secondary btn--sm"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-i18n="projects_view_code">
+                </a>
+              </div>
+            </article>
 
-          <!-- Project: Literacy app -->
-          <article class="project-card" aria-labelledby="proj-literacy-title">
-            <h3 id="proj-literacy-title" data-i18n="project_literacy_title"></h3>
-            <p data-i18n="project_literacy_desc"></p>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="projects_view_code"></a>
-              <!-- demo link added in Phase 4 if applicable -->
-            </div>
-          </article>
+            <!-- Project: Literacy app -->
+            <article class="project-card" aria-labelledby="proj-literacy-title">
+              <h3 id="proj-literacy-title" data-i18n="project_literacy_title"></h3>
+              <p data-i18n="project_literacy_desc"></p>
+              <div class="project-links">
+                <a href="https://github.com/santiamm/plataforma-alfabetizacion-digital"
+                   class="btn btn--secondary btn--sm"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-i18n="projects_view_code">
+                </a>
+              </div>
+            </article>
 
+          </div>
         </div>
       </section>
 
       <!-- =====================================================
            CONTACT SECTION
-           - Section heading (data-i18n="contact_heading")
-           - Invitation subheading (data-i18n="contact_subheading")
-           - Email link label (data-i18n="contact_email_label")
-           - Social links label (data-i18n="contact_social_label")
-           - Actual links / form added in Phase 2
       ====================================================== -->
       <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" data-i18n="contact_heading"></h2>
-        <p data-i18n="contact_subheading"></p>
-        <div class="contact-links">
-          <a href="#" data-i18n="contact_email_label"></a>
-          <!-- social links added in Phase 2 -->
+        <div class="container">
+          <h2 id="contact-heading" data-i18n="contact_heading"></h2>
+          <p class="section-subheading" data-i18n="contact_subheading"></p>
+          <div class="contact-links">
+            <a href="mailto:jsantiamm@gmail.com"
+               class="btn btn--primary"
+               data-i18n="contact_email_label">
+            </a>
+          </div>
         </div>
       </section>
 

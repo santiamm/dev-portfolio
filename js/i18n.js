@@ -40,33 +40,33 @@ const translations = {
     skills_cat_other:     'Other Tools',   // "Other Tools"
 
     // Projects section
-    projects_heading:    '',
-    projects_subheading: '',
-    projects_view_code:  '',   // "View code"
-    projects_view_demo:  '',   // "Live demo" — rendered conditionally in Phase 2
+    projects_heading:    'Projects',
+    projects_subheading: 'A few things I\'ve built',
+    projects_view_code:  'View code',
+    projects_view_demo:  '',   // no demo for any project — key kept for future use
 
     // Project: Booking system
-    project_booking_title: '',
-    project_booking_desc:  '',
+    project_booking_title: 'Appointment Booking System',
+    project_booking_desc:  'Small businesses often lose time — and clients — juggling appointments by phone or messages, with double bookings and mixed-up schedules. This system lets clients see real availability and book their own appointment in seconds, with no back-and-forth needed.',
 
     // Project: StockSync
-    project_stocksync_title: '',
-    project_stocksync_desc:  '',
+    project_stocksync_title: 'Inventory Management from Excel',
+    project_stocksync_desc:  'Many small businesses still track their inventory in Excel — and it works, until it doesn\'t. This tool lets them keep using the spreadsheets they already have, while turning that data into a clear, organized view of their stock.',
 
     // Project: Literacy app
-    project_literacy_title: '',
-    project_literacy_desc:  '',
+    project_literacy_title: 'Digital Literacy Platform',
+    project_literacy_desc:  'Scammers increasingly target older adults — fake calls, phishing messages, fraudulent links, misleading ads. This platform helps them recognize and avoid these threats, so they can live their digital life with confidence instead of fear.',
 
     // Contact section
-    contact_heading:      '',
-    contact_subheading:   '',
-    contact_email_label:  '',
+    contact_heading:      'Contact',
+    contact_subheading:   'Feel free to reach out',
+    contact_email_label:  'Send me an email',
     contact_social_label: '',
 
     // ARIA labels for floating icon links
-    aria_github:   '',   // "Visit my GitHub profile"
-    aria_linkedin: '',   // "Visit my LinkedIn profile"
-    aria_email:    '',   // "Send me an email"
+    aria_github:   'Visit my GitHub profile',
+    aria_linkedin: 'Visit my LinkedIn profile',
+    aria_email:    'Send me an email',
 
     // Footer ("Built by [name]" — year appended by JS)
     footer_built_by: 'Built by Jhoseph Mendez ·',
@@ -90,28 +90,28 @@ const translations = {
     skills_cat_cloud:     'Cloud y DevOps (aprendiendo)',
     skills_cat_other:     'Otras herramientas',
 
-    projects_heading:    '',
-    projects_subheading: '',
-    projects_view_code:  '',
+    projects_heading:    'Proyectos',
+    projects_subheading: 'Algunas cosas que he construido',
+    projects_view_code:  'Ver código',
     projects_view_demo:  '',
 
-    project_booking_title: '',
-    project_booking_desc:  '',
+    project_booking_title: 'Sistema de Reservas y Citas',
+    project_booking_desc:  'Muchos pequeños negocios pierden tiempo — y clientes — coordinando citas por teléfono o mensajes, con doble reservas y horarios confusos. Este sistema permite que los clientes vean la disponibilidad real y agenden su propia cita en segundos, sin ida y vuelta.',
 
-    project_stocksync_title: '',
-    project_stocksync_desc:  '',
+    project_stocksync_title: 'Gestión de Inventario desde Excel',
+    project_stocksync_desc:  'Muchos pequeños negocios siguen manejando su inventario en Excel, y funciona, hasta que deja de ser suficiente. Esta herramienta les permite seguir usando las hojas de cálculo que ya tienen, mientras convierte esa información en una vista clara y organizada de su stock.',
 
-    project_literacy_title: '',
-    project_literacy_desc:  '',
+    project_literacy_title: 'Plataforma de Alfabetización Digital',
+    project_literacy_desc:  'Los adultos mayores son cada vez más blanco de estafas: llamadas falsas, mensajes de phishing, links fraudulentos, anuncios engañosos. Esta plataforma les ayuda a reconocer y evitar estas amenazas, para que puedan vivir su vida digital con confianza en vez de miedo.',
 
-    contact_heading:      '',
-    contact_subheading:   '',
-    contact_email_label:  '',
+    contact_heading:      'Contacto',
+    contact_subheading:   'Siéntete libre de escribirme',
+    contact_email_label:  'Envíame un correo',
     contact_social_label: '',
 
-    aria_github:   '',
-    aria_linkedin: '',
-    aria_email:    '',
+    aria_github:   'Visita mi perfil de GitHub',
+    aria_linkedin: 'Visita mi perfil de LinkedIn',
+    aria_email:    'Envíame un correo',
 
     footer_built_by: 'Creado por Jhoseph Mendez ·',
   },

@@ -415,17 +415,15 @@ section:nth-child(even) {
    PROJECTS SECTION
 ----------------------------------------------------------- */
 
-#projects {
-  /* layout defined in Phase 2 */
-}
-
 .projects-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-8);
-  margin-top: var(--space-8);
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-surface);
   border-radius: var(--border-radius-lg);
   padding: var(--space-8);
@@ -438,10 +436,30 @@ section:nth-child(even) {
   transform: translateY(-4px);
 }
 
+/* Allow description text to fill card width */
+.project-card p {
+  max-width: 100%;
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+  flex: 1; /* push .project-links to bottom */
+}
+
 .project-links {
   display: flex;
   gap: var(--space-4);
   margin-top: var(--space-6);
+}
+
+/* Small button variant for project cards */
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -451,6 +469,11 @@ section:nth-child(even) {
 
 #contact {
   text-align: center;
+}
+
+#contact h2,
+#contact .section-subheading {
+  margin-inline: auto;
 }
 
 .contact-links {
@@ -474,6 +497,41 @@ footer {
   color: var(--color-text);
   font-family: var(--font-base);
   font-size: var(--font-size-base);
+}
+
+
+/* -----------------------------------------------------------
+   GLOBAL RESPONSIVE — narrow screens (320–768 px)
+   Covers any overflow or legibility issues not already handled
+   at the component level.
+----------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  /* Prevent any element from causing horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Scale down h1 so it stays on-screen on small phones */
+  h1 {
+    font-size: clamp(2rem, 8vw, var(--font-size-5xl));
+  }
+
+  /* Section padding narrower on mobile */
+  section {
+    padding: var(--space-16) var(--space-4);
+  }
+
+  /* p max-width: let it breathe on narrow viewports */
+  p {
+    max-width: 100%;
+  }
+
+  /* Floating actions: slightly closer to edge */
+  .floating-actions {
+    top: var(--space-4);
+    right: var(--space-4);
+  }
 }
 
 
