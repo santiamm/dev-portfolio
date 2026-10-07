@@ -431,9 +431,12 @@ section:nth-child(even) {
   overflow: hidden; /* Ensures child visual doesn't break border-radius */
 }
 
-.project-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
+@media (prefers-reduced-motion: no-preference) {
+  .project-card:hover,
+  .project-card:focus-within {
+    box-shadow: var(--shadow-lg);
+    transform: perspective(800px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+  }
 }
 
 .project-visual {
