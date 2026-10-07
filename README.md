@@ -1,4 +1,4 @@
-﻿# Jhoseph Mendez - Dev Portfolio
+# Jhoseph Mendez - Dev Portfolio
 
 A minimal and modern personal developer portfolio built from scratch.
 
