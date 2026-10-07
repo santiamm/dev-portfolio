@@ -426,9 +426,9 @@ section:nth-child(even) {
   flex-direction: column;
   background-color: var(--color-surface);
   border-radius: var(--border-radius-lg);
-  padding: var(--space-8);
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition-base), transform var(--transition-base);
+  overflow: hidden; /* Ensures child visual doesn't break border-radius */
 }
 
 .project-card:hover {
@@ -436,8 +436,37 @@ section:nth-child(even) {
   transform: translateY(-4px);
 }
 
+.project-visual {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-surface) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-visual img,
+.project-visual svg {
+  opacity: 0.8;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.project-card:hover .project-visual svg {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.project-content {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* Allow description text to fill card width */
-.project-card p {
+.project-content p {
   max-width: 100%;
   color: var(--color-text-muted);
   margin-top: var(--space-3);
