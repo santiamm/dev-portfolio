@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal developer portfolio" />
+    <meta name="description" content="Jhoseph Mendez: estudiante de Tecnología en Desarrollo de Sistemas Informáticos (UTS, Colombia). Soporte TI, desarrollo web y proyectos académicos." />
 
-    <!-- Open Graph (filled in Phase 2) -->
+    <!-- Open Graph (preview when the link is shared) -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://santiamm.github.io/dev-portfolio/" />
+    <meta property="og:title" content="Jhoseph Mendez · Portafolio" />
+    <meta property="og:description" content="Estudiante de Tecnología en Desarrollo de Sistemas Informáticos (UTS, Colombia). Soporte TI, desarrollo web y proyectos académicos." />
+    <meta property="og:image" content="https://santiamm.github.io/dev-portfolio/assets/images/projects/stocksync.png" />
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,17 +24,11 @@
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/main.css" />
 
-    <title>Dev Portfolio</title>
+    <title>Jhoseph Mendez · Portafolio</title>
   </head>
   <body>
 
-    <!-- =====================================================
-         FLOATING ACTIONS
-         - Language toggle button (active from Phase 1)
-         - GitHub icon link      (linked in Phase 4; icon added in Phase 5)
-         - LinkedIn icon link    (linked in Phase 4; icon added in Phase 5)
-         - Email icon link       (linked in Phase 4; icon added in Phase 5)
-    ====================================================== -->
+    <!-- Floating actions: language toggle + GitHub, LinkedIn, email -->
     <div class="floating-actions" aria-label="Quick actions">
       <button
         id="lang-toggle"
@@ -82,14 +78,7 @@
 
     <main>
 
-      <!-- =====================================================
-           HERO SECTION
-           - Name as h1 (data-i18n="hero_name")
-           - Role / title (data-i18n="hero_role")
-           - About paragraph (data-i18n="hero_about")
-           - Primary CTA button (data-i18n="hero_cta")
-           - CV download link (data-i18n="cv_download")
-      ====================================================== -->
+      <!-- Hero: name, role, about, CTA and CV download -->
       <section id="hero" aria-labelledby="hero-name">
         <div class="hero-layout">
           <div class="hero-content">
@@ -107,17 +96,7 @@
         </div>
       </section>
 
-      <!-- =====================================================
-           SKILLS SECTION
-           - Section heading (data-i18n="skills_heading")
-           - Optional subheading (data-i18n="skills_subheading")
-           - 4 category groups:
-               · Languages & Core  (data-i18n="skills_cat_languages")
-               · Databases         (data-i18n="skills_cat_databases")
-               · Cloud & DevOps    (data-i18n="skills_cat_cloud")
-               · Other Tools       (data-i18n="skills_cat_other")
-           - Skill items (icons + labels) added in Phase 3
-      ====================================================== -->
+      <!-- Skills: grouped chips -->
       <section id="skills" aria-labelledby="skills-heading">
         <div class="container">
           <header class="section-header">
@@ -142,8 +121,6 @@
               <h3 data-i18n="skills_cat_databases"></h3>
               <div class="skills-chips">
                 <div class="skill-chip"><img src="assets/icons/postgresql.svg" alt="" aria-hidden="true"><span>PostgreSQL</span></div>
-                <div class="skill-chip"><img src="assets/icons/mongodb.svg" alt="" aria-hidden="true"><span>MongoDB</span></div>
-                <div class="skill-chip"><img src="assets/icons/mariadb.svg" alt="" aria-hidden="true"><span>MariaDB</span></div>
                 <div class="skill-chip"><img src="assets/icons/sqlite.svg" alt="" aria-hidden="true"><span>SQLite</span></div>
               </div>
             </div>
@@ -167,16 +144,23 @@
                 <div class="skill-chip"><img src="assets/icons/xampp.svg" alt="" aria-hidden="true"><span>XAMPP</span></div>
               </div>
             </div>
+
+            <div class="skills-category">
+              <h3 data-i18n="skills_cat_support"></h3>
+              <div class="skills-chips">
+                <div class="skill-chip"><span data-i18n="skill_customer_service"></span></div>
+                <div class="skill-chip"><span data-i18n="skill_it_support"></span></div>
+                <div class="skill-chip"><span>Windows</span></div>
+                <div class="skill-chip"><span data-i18n="skill_linux"></span></div>
+                <div class="skill-chip"><span data-i18n="skill_excel"></span></div>
+                <div class="skill-chip"><span data-i18n="skill_english"></span></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- =====================================================
-           PROJECTS SECTION
-           - 3 cards: booking, stocksync, literacy
-           - No demo links (none of the projects have a live demo)
-           - Repo links wired to real GitHub URLs
-      ====================================================== -->
+      <!-- Projects: screenshot, status, description, tech tags, repo link -->
       <section id="projects" aria-labelledby="projects-heading">
         <div class="container">
           <header class="section-header">
@@ -186,33 +170,16 @@
 
           <div class="projects-grid">
 
-            <!-- Project: Booking system -->
-            <article class="project-card" aria-labelledby="proj-booking-title">
-              <div class="project-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><rect x="8" y="14" width="2" height="2"/><rect x="14" y="14" width="2" height="2"/></svg>
-              </div>
-              <div class="project-content">
-                <h3 id="proj-booking-title" data-i18n="project_booking_title"></h3>
-                <p data-i18n="project_booking_desc"></p>
-                <div class="project-links">
-                  <a href="https://github.com/santiamm/booking-system-laravel"
-                     class="btn btn--secondary btn--sm"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     data-i18n="projects_view_code">
-                  </a>
-                </div>
-              </div>
-            </article>
-
             <!-- Project: StockSync -->
             <article class="project-card" aria-labelledby="proj-stocksync-title">
               <div class="project-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                <img src="assets/images/projects/stocksync.png" data-i18n-alt="project_stocksync_alt" alt="" loading="lazy" />
               </div>
               <div class="project-content">
+                <span class="project-status" data-i18n="project_status_done"></span>
                 <h3 id="proj-stocksync-title" data-i18n="project_stocksync_title"></h3>
                 <p data-i18n="project_stocksync_desc"></p>
+                <ul class="project-tags" data-i18n-aria="aria_project_tags"><li>Laravel</li><li>PHP</li><li>SQLite</li><li>Tailwind CSS</li><li>Excel</li></ul>
                 <div class="project-links">
                   <a href="https://github.com/santiamm/stocksync-enterprise"
                      class="btn btn--secondary btn--sm"
@@ -224,14 +191,16 @@
               </div>
             </article>
 
-            <!-- Project: Literacy app -->
+            <!-- Project: Digital literacy platform (degree project, in progress) -->
             <article class="project-card" aria-labelledby="proj-literacy-title">
               <div class="project-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                <img src="assets/images/projects/alfabetizacion.png" data-i18n-alt="project_literacy_alt" alt="" loading="lazy" />
               </div>
               <div class="project-content">
+                <span class="project-status project-status--progress" data-i18n="project_status_progress"></span>
                 <h3 id="proj-literacy-title" data-i18n="project_literacy_title"></h3>
                 <p data-i18n="project_literacy_desc"></p>
+                <ul class="project-tags" data-i18n-aria="aria_project_tags"><li>Python (Flask)</li><li>SQLite</li><li>JavaScript</li><li>Bootstrap</li><li>pytest</li></ul>
                 <div class="project-links">
                   <a href="https://github.com/santiamm/plataforma-alfabetizacion-digital"
                      class="btn btn--secondary btn--sm"
@@ -244,12 +213,11 @@
             </article>
 
           </div>
+          <p class="projects-note" data-i18n="projects_note"></p>
         </div>
       </section>
 
-      <!-- =====================================================
-           CONTACT SECTION
-      ====================================================== -->
+      <!-- Contact -->
       <section id="contact" aria-labelledby="contact-heading">
         <div class="container">
           <h2 id="contact-heading" data-i18n="contact_heading"></h2>
@@ -259,17 +227,19 @@
                class="btn btn--primary"
                data-i18n="contact_email_label">
             </a>
+            <a href="https://www.linkedin.com/in/jhosephmendez"
+               class="btn btn--secondary"
+               target="_blank"
+               rel="noopener noreferrer"
+               data-i18n="contact_linkedin_label">
+            </a>
           </div>
         </div>
       </section>
 
     </main>
 
-    <!-- =====================================================
-         FOOTER
-         - "Built by [name]" text (data-i18n="footer_built_by")
-         - Year injected dynamically by JS (new Date().getFullYear())
-    ====================================================== -->
+    <!-- Footer (year injected by JS) -->
     <footer>
       <p>
         <span data-i18n="footer_built_by"></span>

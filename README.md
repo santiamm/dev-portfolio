@@ -1,29 +1,45 @@
-# Jhoseph Mendez - Dev Portfolio
+# Portafolio de Jhoseph Mendez
 
-A minimal and modern personal developer portfolio built from scratch.
+🌐 **En línea:** [santiamm.github.io/dev-portfolio](https://santiamm.github.io/dev-portfolio/)
 
-🌐 **Live Demo:** [https://santiamm.github.io/dev-portfolio/](https://santiamm.github.io/dev-portfolio/)
+Página personal con mi hoja de vida, mis habilidades y mis proyectos académicos. Estudio Tecnología en Desarrollo de Sistemas Informáticos en las Unidades Tecnológicas de Santander (UTS, Bucaramanga) y busco trabajo en soporte técnico, servicio al cliente o bodega, presencial o remoto.
 
-## Overview
-This is a fully bilingual (EN/ES) personal portfolio designed to showcase my work and technical skills. It features a clean hero section, a categorized skills breakdown, highlighted projects, and a direct contact area, all while maintaining a lightweight and accessible footprint.
+El sitio se hizo con ayuda de herramientas de IA: yo decidí el contenido y la estructura, y revisé que todo funcionara.
 
-## Built With
-- **HTML5** (Semantic structure and accessibility)
-- **CSS3** (Custom properties/variables, fully responsive, zero external CSS frameworks)
-- **Vanilla JavaScript** (DOM manipulation and a custom `i18n.js` internationalization system)
+> 🇺🇸 *Personal portfolio (Spanish / English): CV download, skills and academic projects. I'm a Systems Development Technology student at UTS, Colombia. Built with AI assistance; I decided the content and checked that it works.*
 
-## Features
-- **Bilingual Support:** Custom EN/ES language toggle with state persistence via `localStorage`.
-- **Responsive Design:** Fully fluid layout that adapts seamlessly to any screen size from mobile to desktop.
-- **Interactive UI:** Smooth CSS-only tilt effects on project cards and hover states.
-- **Downloadable CV:** Direct access to a downloadable PDF resume.
+## Qué tiene
 
-## Run Locally
-Since this is a completely static website with no dependencies, running it locally is incredibly simple:
+- **Inicio:** presentación, foto y botón para descargar la hoja de vida en PDF.
+- **Habilidades:** herramientas que he usado en la universidad y en mis proyectos, a nivel académico.
+- **Proyectos:** con captura, estado y enlace al código:
+  - [StockSync](https://github.com/santiamm/stocksync-enterprise): inventario de bodega en Laravel.
+  - [Plataforma de alfabetización digital](https://github.com/santiamm/plataforma-alfabetizacion-digital): proyecto de grado, en curso.
+- **Contacto:** correo y LinkedIn.
+- **Español / inglés:** la primera vez se abre en el idioma del navegador; después recuerda el que elija el visitante.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/santiamm/dev-portfolio.git
-   ```
-2. Open the directory and simply open `index.html` in your browser.
+## Tecnologías
 
+HTML, CSS y JavaScript sin frameworks ni dependencias. Publicado con GitHub Pages desde la rama `master`.
+
+## Verlo en local
+
+No necesita instalar nada:
+
+```bash
+git clone https://github.com/santiamm/dev-portfolio.git
+```
+
+Luego se abre `index.html` en el navegador.
+
+## Estructura
+
+```
+index.html            página
+css/                  estilos (variables.css tiene colores y tamaños)
+js/i18n.js            textos en español e inglés y botón de idioma
+assets/docs/          hoja de vida en PDF
+assets/images/        foto y capturas de los proyectos
+```
+
+Para cambiar un texto se edita `js/i18n.js` (en los dos idiomas).
